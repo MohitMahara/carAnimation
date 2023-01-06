@@ -1,0 +1,282 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    overflow: hidden;
+}
+
+.container{
+    overflow: hidden;
+}
+
+.sky {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-image: url('images/background.jpg');
+    background-repeat: no-repeat;
+}
+
+.trees {
+    height: 100vh;
+    width: 100%;
+    background-image: url('images/trees.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -8vh;
+}
+
+.track {
+    height: 70vh;
+    width: 800vw;
+    background-image: url('images/track.png');
+    background-repeat: repeat-x;
+    position: absolute;
+    top: 70vh;
+}
+
+.track.Move{
+    animation: carMove linear 10s infinite;
+}
+
+
+
+.car {
+    height: 100px;
+    width: 350px;
+    background-image: url('images/car_body.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 30vw;
+    bottom: 120px;
+}
+
+.car.Animation{
+    animation: shake linear 1s infinite;
+
+}
+
+.wheel1 img {
+    width: 77px;
+    position: relative;
+    top: 37px;
+    left: 38px;
+}
+
+.wheel2 img {
+    width: 77px;
+    position: relative;
+    left: 215px;
+    bottom: 42px;
+}
+
+
+.wheel2 img.active {
+    animation: wheelRotation linear .6s infinite;
+
+}
+
+
+.wheel1 img.active {
+    animation: wheelRotation linear .6s infinite;
+
+}
+
+.button-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    padding-top: 15vh;
+}
+
+
+.button {
+    padding: 10px 30px;
+    background-color: red;
+    border-radius: 8px;
+    font-family: sans-serif;
+    border: none;
+    font-size: 1.1rem;
+    width: 10vw;
+    font-weight: bolder;
+}
+
+/* animation */
+
+@keyframes wheelRotation {
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+
+}
+
+
+@keyframes carMove {
+    100% {
+        transform: translate(-500vw);
+    }
+
+
+
+}
+
+
+
+@keyframes shake {
+
+    0% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+
+    }
+
+    100% {
+        transform: translateY(-5px);
+
+    }
+}
+
+
+
+@keyframes shakeBody {
+
+    0% {
+        transform: translateY(-5px);
+    }
+
+    50% {
+        transform: translateY(5px);
+
+    }
+
+    100% {
+        transform: translateY(-5px);
+
+    }
+
+
+}
+
+
+
+/* media querys for 4k screen */
+
+@media screen and (max-width: 2560px) {
+    
+    .track{
+        top: 81vh;
+    }
+
+.car{
+    bottom: 137px;
+}
+
+}
+
+
+/* medai querys for tablets */
+
+@media screen and (max-width:820px) {
+    
+    .button {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+        width: 15vw;
+    }
+
+
+    .button-div {
+        padding: 0.5rem;
+        padding-top: 15vh;
+    }
+
+
+    .track{
+        top: 70vh;
+    }
+
+.car{
+    bottom:120px ;
+}
+
+}
+
+/* media querys for large  and small phones */
+
+@media screen and (max-width:600px) {
+    
+    .button {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+        width: 16vw;
+    }
+
+
+    .button-div {
+        gap: 1rem;
+        padding: 0.5rem;
+        padding-top: 15vh;
+    }
+
+
+    
+.car {
+    width: 300px;
+    background-size: 100%;;
+    left: 10vw;
+}
+
+.wheel2 img{
+    left: 178px;
+    bottom: 51px
+}
+
+
+.wheel1 img{
+top: 27px;
+left: 28px;
+}
+
+
+
+.track.Move{
+    animation: carMove linear 3s infinite;
+}
+
+.car{
+    bottom:120px ;
+}
+
+.track{
+    top: 70vh;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
